@@ -6,7 +6,10 @@
     <div class="p-2 mb-6">
       <highcharts :options="generateOptions"></highcharts>
     </div>
-    <div class=" mb-5 flex justify-between overflow-hidden">
+    <div
+      v-show="people.length > 0"
+      class=" mb-5 flex justify-between overflow-hidden"
+    >
       <span class="font-bold text-2xl">
         Patient's Dataset
       </span>
@@ -33,7 +36,7 @@
       </span>
     </div>
     <div
-      v-show="open"
+      v-show="people.length > 0 && open"
       class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-10"
     >
       <div
@@ -55,6 +58,9 @@
           {{ Object.values(person)[0]["blood-group"] }}
         </div>
       </div>
+    </div>
+    <div v-show="people.length === 0" class="text-2xl text-center">
+      No Data Available Yet
     </div>
   </div>
 </template>
