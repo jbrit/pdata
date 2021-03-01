@@ -4,6 +4,7 @@ import "./index.css";
 import "firebase";
 import { firestorePlugin } from "vuefire";
 import HighchartsVue from "highcharts-vue";
+import './registerServiceWorker'
 
 Vue.use(firestorePlugin);
 Vue.use(HighchartsVue);
