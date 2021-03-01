@@ -94,7 +94,6 @@ const loadElements = (array) => {
       })
     );
   }
-  console.log(array.map((person) => personObject(person).age).sort());
 };
 export default {
   name: "App",
@@ -126,7 +125,6 @@ export default {
         series[2][idx],
         series[3][idx],
       ];
-      void ageGroupArray;
       return {
         chart: {
           type: "column",
